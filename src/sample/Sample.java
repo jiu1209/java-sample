@@ -13,7 +13,7 @@ public class Sample {
       case 2:
         System.out.println("Xの値は2です");
         break;
-      case 3:
+      default:
         System.out.println("Xの値は2です");
         break;
       }
