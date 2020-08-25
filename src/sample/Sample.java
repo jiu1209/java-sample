@@ -19,5 +19,31 @@ public class Sample {
 	    System.out.println(singo[0]);
 	    System.out.println(singo[1]);
 	    System.out.println(singo[2]);
-	}
+
+	  int b = 10;
+
+	  if (b > 20) {
+		  System.out.println("bは20より大きい");
+	  } else if (b == 20) {
+		  System.out.println("bと20は等しい");
+	  } else {
+		  System.out.println("bは20より小さい");
+	  }
+
+	  for (int c = 0; c < 5; c++) {
+		  if (c == 3) {
+			  break;
+		  }
+		System.out.println(c);
+	  }
+	   System.out.println("プログラムの終了");
+
+	   for (int c = 0; c < 5; c++) {
+			  if (c == 3) {
+				  continue;
+			  }
+			System.out.println(c);
+		  }
+		   System.out.println("プログラムの終了");
+   }
 }
