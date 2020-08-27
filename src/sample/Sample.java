@@ -1,49 +1,54 @@
 package sample;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 
 public class Sample {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-	  double[] peopol_Height = new double[5];
-	    peopol_Height[0] = 175.2;
-	    peopol_Height[1] = 172.5;
-	    peopol_Height[2] = 170.5;
-	    peopol_Height[3] = 168.5;
-	    peopol_Height[4] = 170.0;
+	  Calendar  calendar  = Calendar.getInstance();
+	  // Calendarクラスのインスタンス作成
 
-	  for (int i = 0; i < peopol_Height.length; i++) {
-		System.out.println(peopol_Height[i]);
-	  }
+      System.out.println(calendar.getTime());
+      // get.TimeでDateクラスのインスタンス作成
 
-	  String[] singo = {"赤","黄","青"};
-	    System.out.println(singo[0]);
-	    System.out.println(singo[1]);
-	    System.out.println(singo[2]);
+      calendar.set(1234, 4 ,6);
+      // setメソッドで、日付の指定
+      System.out.println(calendar.getTime());
 
-	  int b = 10;
+      calendar.clear();
+      // 時分秒をセットしている
 
-	  if (b > 20) {
-		  System.out.println("bは20より大きい");
-	  } else if (b == 20) {
-		  System.out.println("bと20は等しい");
-	  } else {
-		  System.out.println("bは20より小さい");
-	  }
+      calendar.set(1234, 4 ,6 ,23 , 11,10);
 
-	  for (int c = 0; c < 5; c++) {
-		  if (c == 3) {
-			  break;
-		  }
-		System.out.println(c);
-	  }
-	   System.out.println("プログラムの終了");
+      System.out.println(calendar.getTime());
 
-	   for (int c = 0; c < 5; c++) {
-			  if (c == 3) {
-				  continue;
-			  }
-			System.out.println(c);
-		  }
-		   System.out.println("プログラムの終了");
-   }
+      int year = calendar.get(Calendar.YEAR);
+      // get(Calendar.YEAR)で年を取得した
+      // yearに参照した
+
+      System.out.println(year);
+
+      calendar.set(Calendar.YEAR, 2020);
+      // setはフィールドの変更も可能
+
+      System.out.println(calendar.getTime());
+
+      calendar.add(Calendar.DAY_OF_YEAR, 3);
+      // addメソッドは計算ができる +は足す
+
+      calendar.add(Calendar.YEAR, -3);
+      // -は引き算ができる
+
+      System.out.println(calendar.getTime());
+
+      SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+      // SimpleDateFormatクラスのインスタンス作成
+
+      String formatteDate = format.format(calendar.getTime());
+      // dateクラスを文字列に変換
+
+      System.out.println(formatteDate);
+	}
 }
