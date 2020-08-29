@@ -1,54 +1,44 @@
 package sample;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.ArrayList;
 
 
 public class Sample {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-	  Calendar  calendar  = Calendar.getInstance();
-	  // Calendarクラスのインスタンス作成
 
-      System.out.println(calendar.getTime());
-      // get.TimeでDateクラスのインスタンス作成
+	 //リストの勉強
+	 //ArrayListクラスで遅い場合はLinkedListクラスを使う
+      ArrayList<String> names = new ArrayList<>();
+      // 変数の宣言とnamesにインスタンスの作成して代入
 
-      calendar.set(1234, 4 ,6);
-      // setメソッドで、日付の指定
-      System.out.println(calendar.getTime());
+      names.add("修一");
+      names.add("正敏");
+      // addメソッドで要素のy＼追加ができる
 
-      calendar.clear();
-      // 時分秒をセットしている
+      System.out.println(names);
 
-      calendar.set(1234, 4 ,6 ,23 , 11,10);
+      names.add(1,"武");
+      // 指定したインデックスに配置する
 
-      System.out.println(calendar.getTime());
+      System.out.println(names);
 
-      int year = calendar.get(Calendar.YEAR);
-      // get(Calendar.YEAR)で年を取得した
-      // yearに参照した
+      names.remove(0);
+      // removeメソッドで要素の削除
 
-      System.out.println(year);
+      System.out.println(names);
 
-      calendar.set(Calendar.YEAR, 2020);
-      // setはフィールドの変更も可能
+      String name = names.get(1);
+      // nameにgetメソッドでnamesの中の1の要素を参照
+      // 参照するだけなので、namesは変更されない
 
-      System.out.println(calendar.getTime());
+      System.out.println(name);
 
-      calendar.add(Calendar.DAY_OF_YEAR, 3);
-      // addメソッドは計算ができる +は足す
+      names.set(1,"古矢");
+      //setメソッドで1の要素を古矢に変更した
 
-      calendar.add(Calendar.YEAR, -3);
-      // -は引き算ができる
+      System.out.println(names);
 
-      System.out.println(calendar.getTime());
 
-      SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-      // SimpleDateFormatクラスのインスタンス作成
-
-      String formatteDate = format.format(calendar.getTime());
-      // dateクラスを文字列に変換
-
-      System.out.println(formatteDate);
 	}
 }
