@@ -1,26 +1,42 @@
 package sample;
-import java.util.HashSet;
+import java.util.HashMap;
 
 
 public class Sample {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-	// セットは要素の重複を許さないコレクション。リストのような順番はない
+	// マップはキーと呼ばれる情報と一緒の管理するコレクション。
 
-    HashSet <String> names = new HashSet<>();
-    // namesにインスタンスを代入
+    HashMap <String, String> names = new HashMap<>();
+    // namesにインスタンスを代入。
+    // 一つ目のStringがキー、2つめのStringが要素
 
-      names.add("修一");
-      names.add("マングース");
-      // リストと同じでaddメソッドで要素の追加。順番がない。
-      // 同じ要素は追加することができない
+      names.put("男性","しゅういち");
+      names.put("女性","まゆ");
+      // リストやセットと違いputメソッドで要素の追加
+
+      System.out.println(names);
+
+      String oldName = names.put("女性", "マングース");
+      // すでに存在しているキーでputすると新しい要素に置き換わる
+      // 古い要素がoldNameに参照され返り値になる
+
+      System.out.println(names);
+      System.out.println(oldName);
+
+      names.remove("男性");
+      // リストとセットと同じくremoveメソッドで削除する
+      // 違うところは引数に要素ではなくキーを記述する
 
       System.out.println(names);
 
-      names.remove("修一");
-      // リストと同じくremoveメソッドで要素の削除
+      names.put("男性","雷");
 
-      System.out.println(names);
-	}
+      String name = names.get("男性");
+      // リストと同じくgetメソッドで要素の取得
+      // キーを引数に指定する
+
+      System.out.println(name);
+  	}
 }
