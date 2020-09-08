@@ -11,4 +11,9 @@ public class Car {
      void speedDown(int value) {
     	 this.speed -= value;
      }
+     public static void main(String[] args) {
+     String frutis = "みかん";
+
+     System.out.println(frutis);
    }
+}
