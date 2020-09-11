@@ -1,5 +1,7 @@
 package sample;
 
+import java.util.HashMap;
+
 public class Car {
 
 
@@ -12,7 +14,11 @@ public class Car {
     	 this.speed -= value;
      }
      public static void main(String[] args) {
-     String frutis = "みかん";
+     HashMap <String, String> frutis = new HashMap<>();
+
+     frutis.put("緑色","スイカ");
+     frutis.put("オレンジ色","みかん");
+
 
      System.out.println(frutis);
    }
