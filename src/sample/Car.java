@@ -1,25 +1,20 @@
 package sample;
 
-import java.util.HashMap;
-
 public class Car {
+   public static void main(String[] args) {
 
+    int age = 15 + 3;
 
-     int speed;
+    int height = 174;
 
-     void speedUp(int value) {
-    	 this.speed += value;
-     }
-     void speedDown(int value) {
-    	 this.speed -= value;
-     }
-     public static void main(String[] args) {
-     HashMap <String, String> frutis = new HashMap<>();
+    final int b;
 
-     frutis.put("緑色","スイカ");
-     frutis.put("オレンジ色","みかん");
+    b = age * height;
 
+    System.out.println(age);
 
-     System.out.println(frutis);
+    System.out.println(age + height);
+
+    System.out.println(b);
    }
 }
