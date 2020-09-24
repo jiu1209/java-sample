@@ -3,18 +3,18 @@ package sample;
 public class Car {
    public static void main(String[] args) {
 
-    int age = 15 + 3;
+	   String[] homes = new String[5];
 
-    int height = 174;
+	   homes[0] = "机";
+       homes[1] = "扉";
+       homes[2] = "と";
+       homes[3] = "き";
+       homes[4] = "み";
 
-    final int b;
+       System.out.println(homes[0]);
 
-    b = age * height;
+       int[] age = {15,16};
 
-    System.out.println(age);
-
-    System.out.println(age + height);
-
-    System.out.println(b);
+       System.out.println(age[1]);
    }
 }
